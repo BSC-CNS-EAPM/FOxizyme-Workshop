@@ -229,21 +229,6 @@ class sequenceSimilarityNetwork:
             self.node_attributes[code]['sequence_length'] = str(len(self.sequences[code]))
             #self.node_attributes[code]['sequence_length'] = str(len(self.sequences[code]))[0] + "00"
 
-    def getUniProtAttributes(self):
-
-        attribute_dict = {}
-
-        for code in self.codes:
-            if code not in self.target_sequences:
-                attributes = (databases.getUniprotData(code))
-                for att_name,att_value in attributes.items():
-                    if att_name not in attribute_dict:
-                        attribute_dict[att_name] = {}
-                    attribute_dict[att_name][code] = att_value
-
-        for key,value in attribute_dict.items():
-            self.addNodeAttribute(key,value,overwrite=True)
-
     def createNodeAttributesFile(self, output_file, overwrite=None, separator=', '):
         """
         Create a node property file using the properties given to the sequenceSimilarityNetwork.
