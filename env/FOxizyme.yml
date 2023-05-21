@@ -22,6 +22,7 @@ dependencies:
   - c-ares=1.19.0=hd590300_0
   - ca-certificates=2023.5.7=hbcca054_0
   - cairo=1.16.0=h35add3b_1015
+  - cd-hit=4.8.1=h43eeafb_9
   - certifi=2023.5.7=pyhd8ed1ab_0
   - cffi=1.15.1=py39he91dace_3
   - charset-normalizer=3.1.0=pyhd8ed1ab_0
